@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Me!</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <center><h1 class="app_title">BudgetMe!</h1></center>
+    <div class="wrapper">
+      <div class="container">
+        <div class="sub-container">
+          <!-- Output -->
+          <div class="output-container flex-space">
+            <div class="total_budget_div">
+                <p>Budget</p>
+                <span id="amount">0</span>
+              </div>
+              <div class="total_expenses_div">
+                <p>Expenses</p>
+                <span id="expenditure-value">0</span>
+              </div>
+              <div class="total_balance_div">
+                <p>Balance</p>
+                <span id="balance-amount">0</span>
+              </div>
+            </div>
+          </div>
+          <!-- Budget -->
+          <div class="total-budget-container">
+            <h3>Budget</h3>
+            <p class="hide error" id="budget-error">
+              Please enter a positive budget amount.
+            </p>
+            <input
+              type="number"
+              id="total-budget"
+              placeholder="Enter Your Budget in Dollars"
+            />
+            <button class="submit" id="total-budget-button">Set Budget</button>
+          </div>
+
+          <!-- Expenditures -->
+          <div class="user-amount-container">
+            <h3>Expenses</h3>
+            <p class="hide error" id="expense-desc-error">
+             Please enter an expense.
+            </p>
+            <input
+              type="text"
+              class="expense-desc"
+              id="expense-desc"
+              placeholder="Enter Expense Description"
+            />
+            <input
+              type="number"
+              id="user-amount"
+              placeholder="Enter Expense Amount"
+            />
+            <button class="submit" id="enter-expense">Submit Expense</button>
+          </div>
+        </div>
+      <!-- List -->
+      <div class="list">
+        <h3>Expense List</h3>
+        <div class="list-container" id="list"></div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
